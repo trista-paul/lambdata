@@ -25,7 +25,6 @@ setuptools.setup(
     install_requires=REQUIRED,
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: None",
         "Operating System :: OS Independent",
     ],
 )
