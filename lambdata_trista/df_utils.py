@@ -13,10 +13,11 @@ os.system("wget http://archive.ics.uci.edu/ml/machine-learning-databases/00482/d
 os.system("unzip dataset.zip")
 TEST_DF = pd.read_csv('dataset.csv')
 
+
 class Utility:
     def __init__(self, tools=2):
         self.tools = tools
-        
+
     def outlier_cleaner(self, df):
         """removes float more than Q3+IQR*1.5 or less than Q1-IQR*1.5"""
         """accepts DataFrame"""
@@ -30,7 +31,6 @@ class Utility:
             df = df.dropna()
             df = df.drop(columns=num)
         return df
-
 
     def datetime_splitter(self, df, col):
         """splits date format column into year, month, day columns"""
